@@ -55,6 +55,7 @@
 #include "llvm/Transforms/Utils/SymbolRewriter.h"
 #include "llvm/Transforms/Utils/UnifyFunctionExitNodes.h"
 #include "llvm/Transforms/Vectorize.h"
+#include "llvm/Transforms/BranchInstCount/BranchInstCount.h"
 #include <cstdlib>
 
 namespace {
@@ -67,6 +68,7 @@ namespace {
       if (std::getenv("bar") != (char*) -1)
         return;
 
+      (void) llvm::createBranchInstCountPass();
       (void) llvm::createAAEvalPass();
       (void) llvm::createAggressiveDCEPass();
       (void) llvm::createAggressiveInstCombinerPass();

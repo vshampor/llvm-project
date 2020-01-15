@@ -449,10 +449,10 @@ endif()
 add_definitions( -D_GNU_SOURCE )
 
 option(CLANG_BUILD_TOOLS
-  "Build the Clang tools. If OFF, just generate build targets." ON)
+  "Build the Clang tools. If OFF, just generate build targets." OFF)
 
-option(CLANG_ENABLE_ARCMT "Build ARCMT." ON)
-option(CLANG_ENABLE_STATIC_ANALYZER "Build static analyzer." ON)
+option(CLANG_ENABLE_ARCMT "Build ARCMT." OFF)
+option(CLANG_ENABLE_STATIC_ANALYZER "Build static analyzer." OFF)
 
 option(CLANG_ENABLE_PROTO_FUZZER "Build Clang protobuf fuzzer." OFF)
 

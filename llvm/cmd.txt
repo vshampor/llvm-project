@@ -1,0 +1,3 @@
+./clang -emit-llvm input.cpp -c -o input.bc
+
+./opt -branchinstcount  -o out.bc  -stats input.bc

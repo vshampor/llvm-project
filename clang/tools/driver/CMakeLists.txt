@@ -15,6 +15,7 @@ set( LLVM_LINK_COMPONENTS
   Support
   TransformUtils
   Vectorize
+  BranchInstCount
   )
 
 option(CLANG_PLUGIN_SUPPORT "Build clang with plugin support" ON)
